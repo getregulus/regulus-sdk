@@ -1,0 +1,25 @@
+{
+  "name": "regulus-sdk",
+  "version": "1.0.0",
+  "description": "Regulus SDK for sending transactions",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ],
+    "coverageReporters": ["text", "html"]
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

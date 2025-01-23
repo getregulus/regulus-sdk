@@ -2,9 +2,10 @@
   "name": "regulus-sdk",
   "version": "1.0.0",
   "description": "Regulus SDK for sending transactions",
-  "main": "src/index.js",
+  "main": "dist/regulus-sdk.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "parcel build src/index.js --dist-dir dist && mv dist/index.js dist/regulus-sdk.js"
   },
   "jest": {
     "collectCoverage": true,
@@ -13,13 +14,28 @@
       "src/**/*.js",
       "!src/**/*.test.js"
     ],
-    "coverageReporters": ["text", "html"]
+    "coverageReporters": [
+      "text",
+      "html"
+    ]
   },
   "dependencies": {
     "axios": "^1.7.9",
     "dotenv": "^16.4.7"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "parcel": "^2.13.3"
+  },
+  "targets": {
+    "default": {
+      "engines": {
+        "node": ">=12"
+      },
+      "outputFormat": "commonjs",
+      "isLibrary": true,
+      "optimize": true,
+      "distDir": "./dist"
+    }
   }
 }

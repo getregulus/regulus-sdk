@@ -1,9 +1,9 @@
 const axios = require('axios');
 
 class HttpClient {
-  constructor(baseUrl, token, organizationId, timeout = 120000) {
+  constructor(baseUrl, apiKey, organizationId, timeout = 120000) {
     if (!baseUrl) throw new Error("Base URL is required");
-    if (!token) throw new Error("JWT Token is required");
+    if (!apiKey) throw new Error("API Key is required");
     if (!organizationId) throw new Error("Organization ID is required");
 
     this.organizationId = organizationId;
@@ -14,7 +14,7 @@ class HttpClient {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
+        'X-API-Key': apiKey,
         'X-Organization-ID': this.organizationId,
       },
     });
@@ -24,7 +24,7 @@ class HttpClient {
       (error) => {
         const res = error.response;
         if (res?.status === 401) {
-          console.error('Unauthorized: Please check your credentials or organization ID');
+          console.error('Unauthorized: Please check your API key or organization ID');
         } else if (res?.status === 400) {
           console.error('Bad Request:', res.data?.message || res.status);
         }

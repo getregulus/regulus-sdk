@@ -1,4 +1,4 @@
-const result = require('dotenv').config();
+const result = require('dotenv').config({ path: '../.env' });
 if (result.error) {
   throw new Error("Failed to load .env file");
 }

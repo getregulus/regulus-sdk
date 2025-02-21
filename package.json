@@ -37,5 +37,16 @@
       "optimize": true,
       "distDir": "./dist"
     }
-  }
+  },
+  "keywords": [
+    "regulus",
+    "sdk",
+    "blockchain",
+    "transactions",
+    "api",
+    "cryptocurrency",
+    "web3",
+    "payments",
+    "developer-tools"
+  ]
 }

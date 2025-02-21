@@ -129,16 +129,11 @@ We welcome contributions! To contribute:
 3. Submit a pull request with a detailed description of your changes
 
 ## Keywords
-
-fraud-detection, transaction-monitoring, risk-management, fintech, payment-processing, nodejs-sdk, api-client, security, compliance, real-time-monitoring, fraud-prevention, transaction-analysis, risk-assessment, financial-security, payment-validation, regulus, anti-fraud, transaction-security, fraud-scoring, risk-scoring
+Regulus, SDK, blockchain, transactions, API, cryptocurrency, Web3, payments, developer tools
 
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
-
-## Support
-
-For support, please contact support@getregulus.co
 
 ## Main Repository
 

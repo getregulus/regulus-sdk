@@ -1,6 +1,6 @@
 {
   "name": "regulus-sdk",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Regulus SDK for sending transactions",
   "main": "dist/regulus-sdk.js",
   "scripts": {

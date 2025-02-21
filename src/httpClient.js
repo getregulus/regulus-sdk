@@ -1,12 +1,12 @@
 const axios = require('axios');
 
 class HttpClient {
-  constructor(baseUrl, apiKey, organizationId, timeout = 120000) {
-    if (!baseUrl) throw new Error("Base URL is required");
+  constructor(apiKey, organizationId, timeout = 120000) {
     if (!apiKey) throw new Error("API Key is required");
     if (!organizationId) throw new Error("Organization ID is required");
 
     this.organizationId = organizationId;
+    const baseUrl = 'https://api.getregulus.co';
 
     this.client = axios.create({
       baseURL: baseUrl,

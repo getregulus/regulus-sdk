@@ -7,12 +7,11 @@ const RegulusSDK = require("./index");
 
 const apiKey = process.env.API_KEY;
 const organizationId = process.env.ORGANIZATION_ID;
-const baseUrl = process.env.BASE_URL;
 
-const sdk = new RegulusSDK(apiKey, organizationId, baseUrl);
+const sdk = new RegulusSDK(apiKey, organizationId);
 
 const transactionData = {
-  transaction_id: "txn_00981",
+  transaction_id: "txn_009819",
   user_id: "user_002",
   amount: 3000000,
   currency: "USD",

@@ -2,11 +2,10 @@ const HttpClient = require('./httpClient');
 const Validators = require('./validators');
 
 class RegulusSDK {
-  constructor(apiKey, organizationId, baseUrl) {
+  constructor(apiKey, organizationId) {
     if (!apiKey) throw new Error("API Key is required");
     if (!organizationId) throw new Error("Organization ID is required");
-    if (!baseUrl) throw new Error("Base URL is required"); 
-    this.httpClient = new HttpClient(baseUrl, apiKey, organizationId);
+    this.httpClient = new HttpClient(apiKey, organizationId);
   }
 
   async sendTransaction(transactionData) {
